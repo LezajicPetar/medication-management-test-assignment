@@ -6,17 +6,14 @@ namespace MedicationManagementApp.Services
 {
     public class MedicationRequestService : IMedicationRequestService
     {
-        private readonly IMedicationRepository _medicationRepository;
         private readonly IMedicationRequestRepository _medicationRequestRepository;
         private readonly IEmailSender _emailSender;
 
         public MedicationRequestService(
-            IMedicationRepository medicationRepository,
             IMedicationRequestRepository medicationRequestRepository,
             IEmailSender emailSender
             )
         {
-            _medicationRepository = medicationRepository;
             _medicationRequestRepository = medicationRequestRepository;
             _emailSender = emailSender;
         }
