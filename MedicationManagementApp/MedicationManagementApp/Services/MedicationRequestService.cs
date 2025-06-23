@@ -29,11 +29,7 @@ namespace MedicationManagementApp.Services
                 throw new MedicationRequestNotFoundException(id);
             }
 
-            var medication = medicationRequest.Medication!;
-            if (medicationRequest == null)
-            {
-                throw new MedicationNotFoundException(id);
-            }
+            var medication = medicationRequest.Medication;
 
             if (medication.Quantity <= 0)
             {

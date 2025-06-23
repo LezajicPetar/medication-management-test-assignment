@@ -58,7 +58,7 @@ namespace MedicationManagementApp.Migrations
                             Id = 2,
                             Description = "Anti-inflammatory",
                             Name = "Ibuprofen",
-                            Quantity = 50
+                            Quantity = 0
                         },
                         new
                         {
@@ -132,7 +132,7 @@ namespace MedicationManagementApp.Migrations
                             PatientEmail = "ana@example.com",
                             PatientName = "Ana Petrović",
                             Quantity = 10,
-                            RequestDate = new DateTime(2025, 6, 18, 15, 46, 29, 356, DateTimeKind.Utc).AddTicks(247)
+                            RequestDate = new DateTime(2025, 6, 18, 16, 5, 0, 196, DateTimeKind.Utc).AddTicks(5141)
                         },
                         new
                         {
@@ -143,7 +143,7 @@ namespace MedicationManagementApp.Migrations
                             PatientEmail = "marko@example.com",
                             PatientName = "Marko Jovanović",
                             Quantity = 5,
-                            RequestDate = new DateTime(2025, 6, 20, 15, 46, 29, 356, DateTimeKind.Utc).AddTicks(257)
+                            RequestDate = new DateTime(2025, 6, 20, 16, 5, 0, 196, DateTimeKind.Utc).AddTicks(5152)
                         },
                         new
                         {
@@ -154,7 +154,7 @@ namespace MedicationManagementApp.Migrations
                             PatientEmail = "ivana@example.com",
                             PatientName = "Ivana Lukić",
                             Quantity = 15,
-                            RequestDate = new DateTime(2025, 6, 21, 15, 46, 29, 356, DateTimeKind.Utc).AddTicks(259)
+                            RequestDate = new DateTime(2025, 6, 21, 16, 5, 0, 196, DateTimeKind.Utc).AddTicks(5155)
                         },
                         new
                         {
@@ -165,7 +165,7 @@ namespace MedicationManagementApp.Migrations
                             PatientEmail = "nikola@example.com",
                             PatientName = "Nikola Nikolić",
                             Quantity = 2,
-                            RequestDate = new DateTime(2025, 6, 22, 15, 46, 29, 356, DateTimeKind.Utc).AddTicks(261)
+                            RequestDate = new DateTime(2025, 6, 22, 16, 5, 0, 196, DateTimeKind.Utc).AddTicks(5157)
                         },
                         new
                         {
@@ -176,7 +176,7 @@ namespace MedicationManagementApp.Migrations
                             PatientEmail = "milica@example.com",
                             PatientName = "Milica Savić",
                             Quantity = 7,
-                            RequestDate = new DateTime(2025, 6, 19, 15, 46, 29, 356, DateTimeKind.Utc).AddTicks(263)
+                            RequestDate = new DateTime(2025, 6, 19, 16, 5, 0, 196, DateTimeKind.Utc).AddTicks(5160)
                         },
                         new
                         {
@@ -187,7 +187,7 @@ namespace MedicationManagementApp.Migrations
                             PatientEmail = "jovan@example.com",
                             PatientName = "Jovan Stević",
                             Quantity = 140,
-                            RequestDate = new DateTime(2025, 6, 21, 15, 46, 29, 356, DateTimeKind.Utc).AddTicks(265)
+                            RequestDate = new DateTime(2025, 6, 21, 16, 5, 0, 196, DateTimeKind.Utc).AddTicks(5162)
                         },
                         new
                         {
@@ -198,7 +198,7 @@ namespace MedicationManagementApp.Migrations
                             PatientEmail = "sara@example.com",
                             PatientName = "Sara Đorđević",
                             Quantity = 4,
-                            RequestDate = new DateTime(2025, 6, 22, 15, 46, 29, 356, DateTimeKind.Utc).AddTicks(267)
+                            RequestDate = new DateTime(2025, 6, 22, 16, 5, 0, 196, DateTimeKind.Utc).AddTicks(5165)
                         },
                         new
                         {
@@ -209,7 +209,7 @@ namespace MedicationManagementApp.Migrations
                             PatientEmail = "luka@example.com",
                             PatientName = "Luka Milić",
                             Quantity = 155,
-                            RequestDate = new DateTime(2025, 6, 23, 15, 46, 29, 356, DateTimeKind.Utc).AddTicks(269)
+                            RequestDate = new DateTime(2025, 6, 23, 16, 5, 0, 196, DateTimeKind.Utc).AddTicks(5168)
                         });
                 });
 

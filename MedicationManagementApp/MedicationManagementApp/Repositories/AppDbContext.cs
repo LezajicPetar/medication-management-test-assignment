@@ -19,7 +19,7 @@ namespace MedicationManagementApp.Repositories
 
             modelBuilder.Entity<Medication>().HasData(
                 new Medication { Id = 1, Name = "Paracetamol", Description = "Pain relief", Quantity = 100 },
-                new Medication { Id = 2, Name = "Ibuprofen", Description = "Anti-inflammatory", Quantity = 50 },
+                new Medication { Id = 2, Name = "Ibuprofen", Description = "Anti-inflammatory", Quantity = 0 },
                 new Medication { Id = 3, Name = "Amoxicillin", Description = "Antibiotic", Quantity = 80 },
                 new Medication { Id = 4, Name = "Diazepam", Description = "Sedative", Quantity = 30 },
                 new Medication { Id = 5, Name = "Metformin", Description = "Diabetes treatment", Quantity = 120 }

@@ -60,7 +60,7 @@ namespace MedicationManagementApp.Migrations
                 values: new object[,]
                 {
                     { 1, "Pain relief", "Paracetamol", 100 },
-                    { 2, "Anti-inflammatory", "Ibuprofen", 50 },
+                    { 2, "Anti-inflammatory", "Ibuprofen", 0 },
                     { 3, "Antibiotic", "Amoxicillin", 80 },
                     { 4, "Sedative", "Diazepam", 30 },
                     { 5, "Diabetes treatment", "Metformin", 120 }
@@ -71,14 +71,14 @@ namespace MedicationManagementApp.Migrations
                 columns: new[] { "Id", "Diagnosis", "DoctorName", "MedicationId", "PatientEmail", "PatientName", "Quantity", "RequestDate" },
                 values: new object[,]
                 {
-                    { 1, "Headache", "Dr. Ilić", 1, "ana@example.com", "Ana Petrović", 10, new DateTime(2025, 6, 18, 15, 46, 29, 356, DateTimeKind.Utc).AddTicks(247) },
-                    { 2, "Inflammation", "Dr. Kovač", 2, "marko@example.com", "Marko Jovanović", 5, new DateTime(2025, 6, 20, 15, 46, 29, 356, DateTimeKind.Utc).AddTicks(257) },
-                    { 3, "Infection", "Dr. Janković", 3, "ivana@example.com", "Ivana Lukić", 15, new DateTime(2025, 6, 21, 15, 46, 29, 356, DateTimeKind.Utc).AddTicks(259) },
-                    { 4, "Anxiety", "Dr. Petrović", 4, "nikola@example.com", "Nikola Nikolić", 2, new DateTime(2025, 6, 22, 15, 46, 29, 356, DateTimeKind.Utc).AddTicks(261) },
-                    { 5, "Diabetes", "Dr. Ilić", 5, "milica@example.com", "Milica Savić", 7, new DateTime(2025, 6, 19, 15, 46, 29, 356, DateTimeKind.Utc).AddTicks(263) },
-                    { 6, "Fever", "Dr. Nikolić", 1, "jovan@example.com", "Jovan Stević", 140, new DateTime(2025, 6, 21, 15, 46, 29, 356, DateTimeKind.Utc).AddTicks(265) },
-                    { 7, "Pain", "Dr. Vuković", 2, "sara@example.com", "Sara Đorđević", 4, new DateTime(2025, 6, 22, 15, 46, 29, 356, DateTimeKind.Utc).AddTicks(267) },
-                    { 8, "Diabetes", "Dr. Matić", 5, "luka@example.com", "Luka Milić", 155, new DateTime(2025, 6, 23, 15, 46, 29, 356, DateTimeKind.Utc).AddTicks(269) }
+                    { 1, "Headache", "Dr. Ilić", 1, "ana@example.com", "Ana Petrović", 10, new DateTime(2025, 6, 18, 16, 5, 0, 196, DateTimeKind.Utc).AddTicks(5141) },
+                    { 2, "Inflammation", "Dr. Kovač", 2, "marko@example.com", "Marko Jovanović", 5, new DateTime(2025, 6, 20, 16, 5, 0, 196, DateTimeKind.Utc).AddTicks(5152) },
+                    { 3, "Infection", "Dr. Janković", 3, "ivana@example.com", "Ivana Lukić", 15, new DateTime(2025, 6, 21, 16, 5, 0, 196, DateTimeKind.Utc).AddTicks(5155) },
+                    { 4, "Anxiety", "Dr. Petrović", 4, "nikola@example.com", "Nikola Nikolić", 2, new DateTime(2025, 6, 22, 16, 5, 0, 196, DateTimeKind.Utc).AddTicks(5157) },
+                    { 5, "Diabetes", "Dr. Ilić", 5, "milica@example.com", "Milica Savić", 7, new DateTime(2025, 6, 19, 16, 5, 0, 196, DateTimeKind.Utc).AddTicks(5160) },
+                    { 6, "Fever", "Dr. Nikolić", 1, "jovan@example.com", "Jovan Stević", 140, new DateTime(2025, 6, 21, 16, 5, 0, 196, DateTimeKind.Utc).AddTicks(5162) },
+                    { 7, "Pain", "Dr. Vuković", 2, "sara@example.com", "Sara Đorđević", 4, new DateTime(2025, 6, 22, 16, 5, 0, 196, DateTimeKind.Utc).AddTicks(5165) },
+                    { 8, "Diabetes", "Dr. Matić", 5, "luka@example.com", "Luka Milić", 155, new DateTime(2025, 6, 23, 16, 5, 0, 196, DateTimeKind.Utc).AddTicks(5168) }
                 });
 
             migrationBuilder.CreateIndex(
