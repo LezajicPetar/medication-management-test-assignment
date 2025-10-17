@@ -41,14 +41,7 @@ namespace TestProject
         public async Task ProcessMedicationRequest_Should_Return_Result_And_Send_Email_When_Successful()
         {
             //Arrange
-            var request = new MedicationRequest
-            {
-                Id = 123,
-                Quantity = 5,
-                PatientName = "Pera Perić",
-                PatientEmail = "pera@example.com",
-                Medication = new Medication { Name = "Ksalol", Quantity = 2000 }
-            };
+            var request = CreateRequest(5, 2000);
 
             _stubRepo.Setup(r => r.GetOne(123)).ReturnsAsync(request);
 
@@ -57,7 +50,7 @@ namespace TestProject
 
             //Assert
             result.ShouldNotBeNull();
-            result.MedicationName.ShouldBe("Ksalol");
+            result.MedicationName.ShouldBe($"{request.Medication.Name}");
 
             _mockEmailSender.Verify(
                 e => e.SendEmail("pera@example.com", It.IsAny<string>(), It.IsAny<string>()),
@@ -69,14 +62,7 @@ namespace TestProject
         public async Task ProcessMedicationRequest_Should_Throw_OutOfStockException_When_No_Medication_Left()
         {
             //Arrange
-            var request = new MedicationRequest
-            {
-                Id = 1,
-                Quantity = 5,
-                PatientName = "Pera Perić",
-                PatientEmail = "pera@example.com",
-                Medication = new Medication { Name = "Ksalol", Quantity = 0 }
-            };
+            var request = CreateRequest(5, 0);
 
             _stubRepo.Setup(m => m.GetOne(1)).ReturnsAsync(request);
 
@@ -94,14 +80,7 @@ namespace TestProject
         public async Task ProcessMedicationRequest_Should_Throw_InsufficientStockException_When_Stock_Is_Lower_Then_Requested()
         {
             //Arrange
-            var request = new MedicationRequest
-            {
-                Id = 1,
-                Quantity = 5,
-                PatientName = "Pera Perić",
-                PatientEmail = "pera@example.com",
-                Medication = new Medication { Name = "Ksalol", Quantity = 1 }
-            };
+            var request = CreateRequest(5, 1);
 
             _stubRepo.Setup(m => m.GetOne(1)).ReturnsAsync(request);
 
@@ -114,6 +93,18 @@ namespace TestProject
                 m.SendEmail(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>()),
                 Times.Never
             );
+        }
+
+        private MedicationRequest CreateRequest(int medicationQuantity, int stock)
+        {
+            return new MedicationRequest
+            {
+                Id = 1,
+                Quantity = medicationQuantity,
+                PatientName = "Pera Perić",
+                PatientEmail = "pera@example.com",
+                Medication = new Medication { Name = "Ksalol", Quantity = stock }
+            };
         }
     }
 }
